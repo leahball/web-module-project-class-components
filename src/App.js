@@ -57,10 +57,7 @@ class App extends React.Component {
       ...this.state,
       todos: this.state.todos.map((item) => {
         if (item.id === selectedTodo.id) {
-          return {
-            ...item,
-            completed: !item.completed,
-          };
+          return { ...item, completed: true };
         } else {
           return item;
         }
@@ -69,6 +66,7 @@ class App extends React.Component {
   };
 
   render() {
+    console.log(this.state);
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
